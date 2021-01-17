@@ -1,6 +1,8 @@
 package accessories;
 
-public class Accessory {
+import interfaces.ISell;
+
+public class Accessory implements ISell {
 
     private String name;
     private AccessoryType accessoryType;
@@ -28,5 +30,10 @@ public class Accessory {
 
     public double getSalePrice() {
         return this.accessoryType.getSalePrice();
+    }
+
+    @Override
+    public double productMarkup() {
+        return getSalePrice() - getTradePrice();
     }
 }
