@@ -58,4 +58,10 @@ public class MusicShopTest {
         musicShop.addToStock(accessory2);
         assertEquals(219.00, musicShop.getTotalPotentialProfit(), 0);
     }
+
+    @Test
+    public void canSellAProduct(){
+        musicShop.sellProduct(stringInstrument);
+        assertEquals(649.99, musicShop.getShopTill(), 0);
+    }
 }

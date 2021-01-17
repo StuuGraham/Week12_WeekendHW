@@ -39,4 +39,8 @@ public class MusicShop{
         }
         return totalProfit;
     }
+
+    public void sellProduct(ISell product){
+        this.shopTill += product.getSalePrice();
+    }
 }
