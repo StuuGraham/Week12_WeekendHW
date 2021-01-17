@@ -32,4 +32,11 @@ public class MusicShop{
         shopStock.add(product);
     }
 
+    public double getTotalPotentialProfit() {
+        double totalProfit = 0.00;
+        for (ISell product : shopStock) {
+            totalProfit += product.productMarkup();
+        }
+        return totalProfit;
+    }
 }
