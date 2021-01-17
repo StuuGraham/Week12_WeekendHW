@@ -21,5 +21,9 @@ public class PercussionInstrumentTest {
         assertEquals(PercussionType.DRUMS, percussionInstrument.getPercussionType());
     }
 
-    // Only testing PercussionType as StringInstrument has show all other tests work through Inheritance.
+    @Test
+    public void canGetProductMarkup(){
+        assertEquals(70.00, percussionInstrument.productMarkup(), 0);
+    }
+    // Only testing PercussionType & Markup as StringInstrument has show all other tests work through Inheritance.
 }

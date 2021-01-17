@@ -1,6 +1,9 @@
 package instruments;
 
-public class BrassInstrument extends Instrument implements IPlay{
+import interfaces.IPlay;
+import interfaces.ISell;
+
+public class BrassInstrument extends Instrument implements IPlay, ISell {
 
     private int valves;
 
@@ -16,5 +19,9 @@ public class BrassInstrument extends Instrument implements IPlay{
 
     public int getNumberOfValves(){
         return valves;
+    }
+
+    public double productMarkup(){
+        return getSalePrice() - getTradePrice();
     }
 }

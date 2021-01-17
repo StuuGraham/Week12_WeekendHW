@@ -1,6 +1,9 @@
 package instruments;
 
-public class StringInstrument extends Instrument implements IPlay{
+import interfaces.IPlay;
+import interfaces.ISell;
+
+public class StringInstrument extends Instrument implements IPlay, ISell {
 
     private int numberOfStrings;
 
@@ -17,6 +20,10 @@ public class StringInstrument extends Instrument implements IPlay{
 
     public int getNumberOfStrings() {
         return numberOfStrings;
+    }
+
+    public double productMarkup(){
+        return getSalePrice() - getTradePrice();
     }
 
     // Inherits the rest of necessary methods from parent class Instrument.

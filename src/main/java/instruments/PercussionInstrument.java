@@ -1,6 +1,9 @@
 package instruments;
 
-public class PercussionInstrument extends Instrument implements IPlay{
+import interfaces.IPlay;
+import interfaces.ISell;
+
+public class PercussionInstrument extends Instrument implements IPlay, ISell {
 
     private PercussionType percussionType;
 
@@ -16,5 +19,9 @@ public class PercussionInstrument extends Instrument implements IPlay{
 
     public PercussionType getPercussionType() {
         return percussionType;
+    }
+
+    public double productMarkup(){
+        return getSalePrice() - getTradePrice();
     }
 }
