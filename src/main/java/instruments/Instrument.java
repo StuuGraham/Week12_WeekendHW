@@ -5,16 +5,16 @@ public abstract class Instrument {
     private String name;
     private String colour;
     private String noise;
-    private double recommendedRetailPrice;
+    private double tradePrice;
     private double salePrice;
     private InstrumentType instrumentType;
 
-    public Instrument(String name, String colour, String noise, double recommendedRetailPrice,
+    public Instrument(String name, String colour, String noise, double tradePrice,
                       double salePrice, InstrumentType instrumentType){
         this.name = name;
         this.colour = colour;
         this.noise = noise;
-        this.recommendedRetailPrice = recommendedRetailPrice;
+        this.tradePrice = tradePrice;
         this.salePrice = salePrice;
         this.instrumentType = instrumentType;
     }
@@ -27,7 +27,7 @@ public abstract class Instrument {
         return colour;
     }
 
-    public void setColour(String colour) {
+    public void changeColour(String colour) {
         this.colour = colour;
     }
 
@@ -35,8 +35,8 @@ public abstract class Instrument {
         return noise;
     }
 
-    public double getRecommendedRetailPrice() {
-        return recommendedRetailPrice;
+    public double getTradePrice() {
+        return tradePrice;
     }
 
     public double getSalePrice() {
